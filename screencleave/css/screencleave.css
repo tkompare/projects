@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+@media screen and (min-width:1001px) {
+	.layer3-head { visibility:hidden; max-height:0px; }
+	.ui-loader { visibility:hidden; }
+}
