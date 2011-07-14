@@ -5,10 +5,11 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.css" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.js"></script>
-		<link rel="stylesheet" href="map.css" />
+	<link rel="stylesheet" href="map.css" />
 	<title>Stalker Application</title>
 </head> 
 <body style="height:100%">
+<!-- The main page -->
 <div id="main" class="page" data-role="page">
 	<div data-role="header">
 		<h2>Stalker</h2>
@@ -18,13 +19,14 @@
 		<a href="#map" data-role="button">Start Stalking</a>
 	</div> 
 </div>
+<!-- The map page -->
 <div id="map" class="page" data-role="page"> 
 	<div id="mapHeader" data-role="header">
 		<a href="#main" data-icon="delete">Close</a>
 		<h2>Follow me...</h2>
 	</div> 
 	<div id="theMap" class="map" data-role="content">
-		<!-- The map goes here -->
+		<!-- The map goes here via loadMap() -->
 	</div> 
 </div> 
 </body>
