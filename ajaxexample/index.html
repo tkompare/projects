@@ -10,14 +10,15 @@
 	<div id="main" class="page" data-role="page">
 		<div id="main-content" class="content" data-role="content">
 			<ol id="main-content-list" class="list" data-role="listview">
-				<!-- Content constructed by getPersons() JavaScript function -->
+				<!-- The <li> elements of Persons gotten by the getPersons() JavaScript function are put here. -->
 			</ol>
 		</div>
-		<!-- Person pages constructed by getPersons() Javascript function -->
 	</div>
+	<!-- Person pages constructed by the getPersons() Javascript function are put here. -->
 </body>
 <script type="text/javascript" src="j/ajaxexample.js"></script>
 <script type="text/javascript">
+<!-- Listener for the main page. This only runs once; when the browser first loads up this DOM -->
 $('#main').live('pagebeforecreate',function(event, ui){
 	var num = $('li').length;
 	if(num == 0)
