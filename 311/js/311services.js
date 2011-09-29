@@ -162,7 +162,7 @@ function loadMap()
 								}
 								else
 								{
-									alert("Geocoder failed due to: " + status);
+									alert("We could not find the address of your location: " + status);
 								}
 							}
 						);
@@ -177,10 +177,10 @@ function loadMap()
 				switch(Error.code) 
 				{
 					case Error.TIMEOUT:
-						alert ('Location services have timed out.');
+						alert ('Location services have timed out. Sorry!');
 						break;
 					case Error.POSITION_UNAVAILABLE:
-						alert ('Location services is busy with another application on your device.');
+						alert ('Your location could not be determined by your device. Sorry!');
 						break;
 					case Error.PERMISSION_DENIED:
 						alert ("Your device denied location services to our web site. Check your device\'s location services settings.");
