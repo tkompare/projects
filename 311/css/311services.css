@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+html { height: 100%; }
+body { width:100%; height: 100%; }
+.page { width:100%; height:100%; }
+.map { width:100%; height:100%; }
+
+/* F
+-----------------------------------------------------------------------------------------------------------*/
+
+.ui-bar-f {
+	border: 1px solid 		#B3B3B3;
+	background: 			#e9eaeb;
+	color: 					#3E3E3E;
+	font-weight: 700;
+	text-shadow: 0 1px 1px 	#fff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#e9ffeb)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #f0f0f0, #e9ffeb); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #f0f0f0, #e9ffeb); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #f0f0f0, #e9ffeb); /* IE10 */
+	background-image:      -o-linear-gradient(top, #f0f0f0, #e9ffeb); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #f0f0f0, #e9ffeb);
+}
+.ui-bar-f,
+.ui-bar-f input,
+.ui-bar-f select,
+.ui-bar-f textarea,
+.ui-bar-f button {
+	font-family: Open Sans, Helvetica, Arial, sans-serif;
+}
+.ui-body-f {
+	border: 1px solid 		#B3B3B3;
+	color: 					#333333;
+	text-shadow: 0 1px 0 	#fff;
+	background: 			#f0f0f0;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ddd)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #eee, #ddd); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #eee, #ddd); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #eee, #ddd); /* IE10 */
+	background-image:      -o-linear-gradient(top, #eee, #ddd); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #eee, #ddd);
+}
+.ui-body-f,
+.ui-body-f input,
+.ui-body-f select,
+.ui-body-f textarea,
+.ui-body-f button {
+	font-family: Open Sans, Helvetica, Arial, sans-serif;
+}
+.ui-body-f .ui-link-inherit {
+	color: 					#333333;
+}
+.ui-body-f .ui-link {
+	color: 					#2489CE;
+	font-weight: 700;
+}
+
+.ui-btn-up-f {
+	border: 1px solid 		#ccc;
+	background: 			#eee;
+	font-weight: 700;
+	color: 					#444;
+	text-shadow: 0 1px 1px #f6f6f6;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#efe)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #fdfdfd, #efe); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #fdfdfd, #efe); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #fdfdfd, #efe); /* IE10 */
+	background-image:      -o-linear-gradient(top, #fdfdfd, #efe); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #fdfdfd, #efe);
+}
+.ui-btn-up-f a.ui-link-inherit {
+	color: 					#2F3E46;
+}
+
+.ui-btn-hover-f {
+	border: 1px solid 		#bbb;
+	background: 			#dadada;
+	font-weight: 700;
+	color: 					#101010;
+	text-shadow: 0 1px 1px 	#fff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#daeada)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #ededed, #daeada); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #ededed, #daeada); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #ededed, #daeada); /* IE10 */
+	background-image:      -o-linear-gradient(top, #ededed, #daeada); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #ededed, #daeada);
+}
+.ui-btn-hover-f a.ui-link-inherit {
+	color: 					#2F3E46;
+}
+.ui-btn-down-f {
+	border: 1px solid 		#808080;
+	background: 			#fdfdfd;
+	font-weight: 700;
+	color: 					#111111;
+	text-shadow: 0 1px 1px 	#ffffff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fdfffd)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #eee, #fdfffd); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #eee, #fdfffd); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #eee, #fdfffd); /* IE10 */
+	background-image:      -o-linear-gradient(top, #eee, #fdfffd); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #eee, #fdfffd);
+}
+.ui-btn-down-f a.ui-link-inherit {
+	color: 					#2F3E46;
+}
+.ui-btn-up-f,
+.ui-btn-hover-f,
+.ui-btn-down-f {
+	font-family: Open Sans, Helvetica, Arial, sans-serif;
+	text-decoration: none;
+}
