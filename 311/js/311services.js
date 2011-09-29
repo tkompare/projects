@@ -45,8 +45,8 @@ function loadMap()
 						zoom: 17,
 						/* 
 						 * Zoom control buttons needed for all (some?) Android
-						 * devices as they don't do un/pinch for un/zooming.
-						 * For consistancy through all devices, let's just
+						 * devices as t2hey don't do un/pinch for un/zooming.
+						 * For consistency through all devices, let's just
 						 * show them on all devices.
 						 */
 						zoomControl: true,
@@ -75,14 +75,14 @@ function loadMap()
 					}
 				);
 				/*
-				 * Bounce the marker on the map. Super cheesey.
+				 * Bounce the marker on the map. Super cheesy.
 				 */
 				MarkerYou.setAnimation(google.maps.Animation.BOUNCE);
 				// Watch the user's device GPS for new location.
 				var Watcher = navigator.geolocation.watchPosition
 				(
 					/*
-					 * When a new positon is returned to the browser...
+					 * When a new position is returned to the browser...
 					 */
 					function(NewPosition)
 					{
@@ -94,7 +94,7 @@ function loadMap()
 					}, 
 					/*
 					 * Do nothing on watch position failure; just keep
-					 * listenting for a new location.
+					 * listening for a new location.
 					 */
 					function() {}, 
 					/*
@@ -133,7 +133,7 @@ function loadMap()
 					}
 				);
 				/*
-				 * Listen for the map page to be closed and stop listenting
+				 * Listen for the map page to be closed and stop listening
 				 * to the user's device location service.
 				 */
 				$('#map').live('pagebeforehide', function(event,ui)
