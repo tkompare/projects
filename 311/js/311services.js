@@ -1,4 +1,4 @@
-function loadMap()
+function loadMap(frompage,mapdomobject)
 {
 	var theAddress = null;
 	/*
@@ -24,7 +24,7 @@ function loadMap()
 					/*
 					 * Put the map in the correct element in the DOM
 					 */
-					document.getElementById('theMap'),
+					document.getElementById(mapdomobject),
 					{
 						/*
 						 * Make the map a road map
@@ -136,7 +136,7 @@ function loadMap()
 				 * Listen for the map page to be closed and stop listening
 				 * to the user's device location service.
 				 */
-				$('#map').live('pagebeforehide', function(event,ui)
+				$('.map-page').live('pagebeforehide', function(event,ui)
 					{
 						if(Watcher != false)
 						{
@@ -158,11 +158,14 @@ function loadMap()
 									$("#city").text(addressArray[4].replace(",",""));
 									$("#state").text(addressArray[5].replace(",",""));
 									$("#postalcode").text(addressArray[6].replace(",",""));
-									$("#address").show();
+									$(".location-button").text("Find Other Location");
+									$(".address").show();
 								}
 								else
 								{
 									alert("We could not find the address of your location: " + status);
+									$(".address").show();
+									$.mobile.changePage( '#'+frompage, { transition:"slide",reverse:true } );
 								}
 							}
 						);
@@ -178,15 +181,23 @@ function loadMap()
 				{
 					case Error.TIMEOUT:
 						alert ('Location services have timed out. Sorry!');
+						$(".address").show();
+						$.mobile.changePage( '#'+frompage, { transition:"slide",reverse:true } );
 						break;
 					case Error.POSITION_UNAVAILABLE:
 						alert ('Your location could not be determined by your device. Sorry!');
+						$(".address").show();
+						$.mobile.changePage( '#'+frompage, { transition:"slide",reverse:true } );
 						break;
 					case Error.PERMISSION_DENIED:
 						alert ("Your device denied location services to our web site. Check your device\'s location services settings.");
+						$(".address").show();
+						$.mobile.changePage( '#'+frompage, { transition:"slide",reverse:true } );
 						break;
 					default:
 						alert ('Your device reported an unknown error. Sorry!');
+						$(".address").show();
+						$.mobile.changePage( '#'+frompage, { transition:"slide",reverse:true } );
 						break;
 				}
 			}

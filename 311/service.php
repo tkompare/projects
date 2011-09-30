@@ -1,3 +1,11 @@
+<?php 
+	session_start();
+	if( ! ($_SESSION && $_SESSION['codepass'] == true))
+	{
+		header("location:index.php");
+		exit();
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,23 +14,19 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
 	<link rel="stylesheet" href="css/311services.css" />
-	<title>311 Services</title>
+	<title>Google Map API Marker Place/Drag/Drop Application</title>
 </head>
 <body style="height:100%">
 <!-- The main page -->
-<div id="index" class="page" data-role="page" data-theme="f">
+<div id="service" class="page" data-role="page" data-theme="f">
 	<div data-role="header" data-theme="f">
-		<h2>311 Services</h2>
+		<h2>Services</h2>
 	</div>
 	<div data-role="content" data-theme="f">
-		<p>All of Chicago thanks you for reporting an issue needing attention. We ask you to complete following items in order to make your request:</p>
-		<ol>
-			<li>Type of Request</li>
-			<li>Location of Service</li>
-			<li>Service Details</li>
-			<li>Contact Information (Optional)</li>
-		</ol>
-		<a href="service.html" data-role="button">Start</a>
+		<ul data-role="listview" data-theme="f">
+			<li><a href="pothole.php" rel="external">Pothole Repair</a></li>
+		</ul>
+		<h6>&copy;Tom Kompare</h6>
 	</div>
 </div>
 </body>
