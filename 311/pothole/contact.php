@@ -1,8 +1,8 @@
 <?php
 	session_start();
-	if( ! ($_SESSION && $_SESSION['codepass'] == true))
+	if( ! (isset($_SESSION['codepass']) && $_SESSION['codepass'] == true))
 	{
-		header("location:../index.php");
+		header("location:/index.php");
 		exit();
 	}
 	if ($_POST)
@@ -30,7 +30,6 @@
 <div id="pothole" class="page" data-role="page" data-theme="f">
 	<div id="pothole-header" data-role="header" data-theme="f">
 		<h2>311 Servic.es</h2>
-		<a href="../about.php" data-icon="info" class="ui-btn-right" data-iconpos="notext">About</a>
 	</div>
 	<div data-role="content" data-theme="f">
 		<h3>Pothole Repair</h3>
@@ -42,7 +41,8 @@
 			<div data-role="fieldcontain"><label for="dayphone">Daytime Phone: </label><input id="dayphone" type="tel" name="dayphone" maxlength="254" value="" /></div>
 			<input type="submit" data-theme="f" value="Submit Service Request"/>
 		</form>
-		<h6>&copy;Tom Kompare</h6>
+		<h6><a href="../about.php">&copy;Tom Kompare</a></h6>
+		<img src="../i/license.png" alt="Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License."/>
 	</div>
 </div>
 <!-- The pothole page -->

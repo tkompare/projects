@@ -1,8 +1,8 @@
 <?php
 	session_start();
-	if( ! ($_SESSION && $_SESSION['codepass'] == true))
+	if( ! (isset($_SESSION['codepass']) && $_SESSION['codepass'] == true))
 	{
-		header("location:../index.php");
+		header("location:/index.php");
 		exit();
 	}
 	if ($_POST)
@@ -11,6 +11,7 @@
 		$_SESSION['pothole']['shape'] = $_POST['shape'];
 		$_SESSION['pothole']['size'] = $_POST['size'];
 		$_SESSION['pothole']['multiple'] = $_POST['multiple'];
+		$_SESSION['pothole']['comment'] = $_POST['comment'];
 		header("location:contact.php");
 		exit;
 	}
@@ -30,7 +31,6 @@
 <div id="pothole" class="page" data-role="page" data-theme="f">
 	<div id="pothole-header" data-role="header" data-theme="f">
 		<h2>311 Servic.es</h2>
-		<a href="../about.php" data-icon="info" class="ui-btn-right" data-iconpos="notext">About</a>
 	</div>
 	<div data-role="content" data-theme="f">
 		<h3>Pothole Repair</h3>
@@ -61,7 +61,7 @@
 				<label for="shape-oval">Oval</label>
 				<input type="radio" name="shape" id="shape-oval" value="Oval"/>
 				<label for="shape-linear">Line</label>
-				<input type="radio" name="shape" id="shape-linear" value="Line"/>
+				<input type="radio" name="shape" id="shape-linear" value="Linear/Line"/>
 			</fieldset>
 		</div>
 		<div data-role="fieldcontain">
@@ -71,9 +71,14 @@
 				<option value="Yes">Yes</option>
 			</select>
 		</div>
+		<div data-role="fieldcontain">
+			<label for="comment">Comment</label>
+			<input id="comment" type="text" name="comment" maxlength="254" value="" />
+		</div>
 		<input type="submit" data-theme="f" value="Continue"/>
 		</form>
-		<h6>&copy;Tom Kompare</h6>
+		<h6><a href="about.php">&copy;Tom Kompare</a></h6>
+		<img src="../i/license.png" alt="Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License."/>
 	</div>
 </div>
 <!-- The pothole page -->

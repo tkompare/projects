@@ -1,5 +1,10 @@
 <?php
 session_start();
+if( ! isset($_SESSION['codepass']))
+{
+	header("location:index.php");
+	exit();
+}
 require_once('recaptchalib.php');
 if($_POST)
 {
@@ -16,7 +21,7 @@ if($_POST)
 		header("location:service.php");
 		exit();
 	}
-	header("location:entercode.php?error=true.php");
+	header("location:entercode.php?error=true");
 	exit();
 }
 ?>
@@ -36,7 +41,6 @@ if($_POST)
 <div id="entercode" class="page" data-role="page" data-theme="f">
 	<div data-role="header" data-theme="f">
 		<h2>311 Servic.es</h2>
-		<a href="about.php" data-icon="info" class="ui-btn-right" data-iconpos="notext">About</a>
 	</div>
 	<div data-role="content" class="nopadding" data-theme="f">
 	<?php if ($_SESSION['codepass'] == true) { ?>
@@ -57,7 +61,8 @@ if($_POST)
 			<input type="submit" data-theme="f" value="Submit Words"/>
 		</form>
 	<?php } ?>
-		<h6 class="padding">&copy;Tom Kompare</h6>
+		<h6 class="padding"><a href="about.php">&copy;Tom Kompare</a></h6>
+		<img class="padding" src="i/license.png" alt="Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License."/>
 	</div>
 </div>
 <?php if($_GET['error']) { ?>

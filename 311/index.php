@@ -1,5 +1,6 @@
-<?php 
+<?php
 $thisSession = session_start();
+$_SESSION = array();
 $_SESSION['codepass'] = false;
 ?>
 <!DOCTYPE html>
@@ -16,11 +17,10 @@ $_SESSION['codepass'] = false;
 <!-- The main page -->
 <div id="index" class="page" data-role="page" data-theme="f">
 	<div data-role="header" data-theme="f">
-		<h2>311 Servic.es (BETA)</h2>
-		<a href="about.php" data-icon="info" class="ui-btn-right" data-iconpos="notext">About</a>
+		<h2>311 Servic.es</h2>
 	</div>
 	<div data-role="content" data-theme="f">
-		<p>Thank you for useing 311Servic.es. We ask you to complete following items in order to make your request:</p>
+		<p>Thank you for using 311Servic.es. Please complete these items to make your request:</p>
 		<ol>
 			<li>Enter Two Words</li>
 			<li>Choose Request Type</li>
@@ -29,9 +29,13 @@ $_SESSION['codepass'] = false;
 			<li>Enter Your Contact Information For Follow-Up (Optional)</li>
 		</ol>
 		<p class="error">Please note that this BETA version only accepts requests within Chicago's 49th Ward boundary.</p>
-		<a href="entercode.php" data-role="button" rel="external">Start</a>
-		<h6>&copy;Tom Kompare</h6>
+		<a href="entercode.php" data-role="button" rel="external">Begin</a>
+		<h6><a href="about.php">&copy;Tom Kompare</a></h6>
+		<img src="i/license.png" alt="Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License."/>
 	</div>
 </div>
+<script type="text/javascript">
+alert('This web site is still under development! Your request will not be sent at this time.');
+</script>
 </body>
 </html>

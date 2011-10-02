@@ -1214,6 +1214,7 @@ function loadMap(frompage,mapdomobject)
 						 */
 						MyLocation = new google.maps.LatLng(NewPosition.coords.latitude,NewPosition.coords.longitude);
 						MarkerYou.setPosition(MyLocation);
+						TheMap.setCenter(MyLocation);
 					}, 
 					/*
 					 * Do nothing on watch position failure; just keep

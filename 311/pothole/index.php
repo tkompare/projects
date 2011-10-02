@@ -7,6 +7,7 @@
 	}
 	if ($_POST)
 	{
+		$_SESSION['service'] = 'pothole';
 		$_SESSION['pothole']['number'] = $_POST['number'];
 		$_SESSION['pothole']['direction'] = $_POST['direction'];
 		$_SESSION['pothole']['name'] = $_POST['name'];
@@ -30,7 +31,6 @@
 <div id="pothole" class="page" data-role="page" data-theme="f">
 	<div id="pothole-header" data-role="header" data-theme="f">
 		<h2>311 Servic.es</h2>
-		<a href="../about.php" data-icon="info" class="ui-btn-right" data-iconpos="notext">About</a>
 	</div>
 	<div data-role="content" data-theme="f">
 		<div data-role="navbar">
@@ -59,7 +59,8 @@
 					<input type="submit" data-theme="f" value="Continue"/>
 				</form>
 		</div>
-		<h6>&copy;Tom Kompare</h6>
+		<h6><a href="about.php">&copy;Tom Kompare</a></h6>
+		<img src="../i/license.png" alt="Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License."/>
 	</div>
 </div>
 <!-- The pothole page -->
